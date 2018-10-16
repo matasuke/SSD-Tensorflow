@@ -21,28 +21,20 @@ from datasets import dataset_utils
 
 slim = tf.contrib.slim
 
-VOC_LABELS = {
+MEAT_LABELS = {
     'none': (0, 'Background'),
-    'aeroplane': (1, 'Vehicle'),
-    'bicycle': (2, 'Vehicle'),
-    'bird': (3, 'Animal'),
-    'boat': (4, 'Vehicle'),
-    'bottle': (5, 'Indoor'),
-    'bus': (6, 'Vehicle'),
-    'car': (7, 'Vehicle'),
-    'cat': (8, 'Animal'),
-    'chair': (9, 'Indoor'),
-    'cow': (10, 'Animal'),
-    'diningtable': (11, 'Indoor'),
-    'dog': (12, 'Animal'),
-    'horse': (13, 'Animal'),
-    'motorbike': (14, 'Vehicle'),
-    'person': (15, 'Person'),
-    'pottedplant': (16, 'Indoor'),
-    'sheep': (17, 'Animal'),
-    'sofa': (18, 'Indoor'),
-    'train': (19, 'Vehicle'),
-    'tvmonitor': (20, 'Indoor'),
+    'raw_beaf': (1, 'beaf'),
+    'half_cooked_beaf': (2, 'beaf'),
+    'cooked_beaf': (3, 'beaf'),
+    'over_cooked_beaf': (4, 'beaf'),
+    'raw_pork': (5, 'pork'),
+    'half_cooked_pork': (6, 'pork'),
+    'cooked_pork': (7, 'pork'),
+    'over_cooked_portk': (8, 'pork'),
+    'raw_chicken': (9, 'chicken'),
+    'half_cooked_chicken': (10, 'chicken'),
+    'cooked_chicken': (11, 'chicken'),
+    'over_cooked_chicken': (12, 'chicken')
 }
 
 def get_split(split_name, dataset_dir, file_pattern, reader,
