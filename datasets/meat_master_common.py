@@ -30,7 +30,7 @@ MEAT_LABELS = {
     'raw_pork': (5, 'pork'),
     'half_cooked_pork': (6, 'pork'),
     'cooked_pork': (7, 'pork'),
-    'over_cooked_portk': (8, 'pork'),
+    'over_cooked_pork': (8, 'pork'),
     'raw_chicken': (9, 'chicken'),
     'half_cooked_chicken': (10, 'chicken'),
     'cooked_chicken': (11, 'chicken'),
