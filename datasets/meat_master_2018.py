@@ -29,19 +29,19 @@ ITEMS_TO_DESCRIPTIONS = {
 # (Images, Objects) statistics on every class.
 TRAIN_STATISTICS = {
     'none': (0, 0),
-    'raw_beaf': (1, 1),
-    'half_cooked_beaf': (1, 1),
-    'cooked_beaf': (1, 1),
-    'over_cooked_beaf': (1, 1),
-    'raw_pork': (1, 1),
-    'half_cooked_pork': (1, 1),
-    'cooked_pork': (1, 1),
-    'over_cooked_portk': (1, 1),
-    'raw_chicken': (1, 1),
-    'half_cooked_chicken': (1, 1),
-    'cooked_chicken': (1, 1),
-    'over_cooked_chicken': (1, 1),
-    'total': (20, 20),
+    'raw_beaf': (196, 385),
+    'half_cooked_beaf': (234, 399),
+    'cooked_beaf': (202, 292),
+    'over_cooked_beaf': (94, 107),
+    'raw_pork': (114, 150),
+    'half_cooked_pork': (149, 182),
+    'cooked_pork': (168, 218),
+    'over_cooked_portk': (21, 24),
+    'raw_chicken': (70, 149),
+    'half_cooked_chicken': (201, 294),
+    'cooked_chicken': (201, 138),
+    'over_cooked_chicken': (121, 138),
+    'total': (873, 2629),
 }
 TEST_STATISTICS = {
     'none': (0, 0),
@@ -60,8 +60,8 @@ TEST_STATISTICS = {
     'total': (20, 20),
 }
 SPLITS_TO_SIZES = {
-    'train': 100,
-    'test': 100,
+    'train': 873,
+    'test': 0,
 }
 SPLITS_TO_STATISTICS = {
     'train': TRAIN_STATISTICS,
@@ -89,9 +89,12 @@ def get_split(split_name, dataset_dir, file_pattern=None, reader=None):
     """
     if not file_pattern:
         file_pattern = FILE_PATTERN
-    return meat_master_common.get_split(split_name, dataset_dir,
-                                      file_pattern, reader,
-                                      SPLITS_TO_SIZES,
-                                      ITEMS_TO_DESCRIPTIONS,
-                                      NUM_CLASSES)
+    return meat_master_common.get_split(
+        split_name,
+        dataset_dir,
+        file_pattern, reader,
+        SPLITS_TO_SIZES,
+        ITEMS_TO_DESCRIPTIONS,
+        NUM_CLASSES
+    )
 
