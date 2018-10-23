@@ -56,7 +56,7 @@ import tensorflow as tf
 import xml.etree.ElementTree as ET
 
 from datasets.dataset_utils import int64_feature, float_feature, bytes_feature
-from datasets.meat_labels import MEAT_LABELS
+from datasets.meat_master_common import MEAT_LABELS
 
 # Original dataset organisation.
 DIRECTORY_ANNOTATIONS = 'Annotations/'
